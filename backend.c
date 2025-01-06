@@ -1828,11 +1828,11 @@ establish ()
 {
     char buf[MSG_SIZ];
 
-    if (*appData.icsCommPort != NULLCHAR) {
+    //if (*appData.icsCommPort != NULLCHAR) {
 	/* Talk to the host through a serial comm port */
-	return OpenCommPort(appData.icsCommPort, &icsPR);
+	//return OpenCommPort(appData.icsCommPort, &icsPR);
 
-    } else if (*appData.gateway != NULLCHAR) {
+    if (*appData.gateway != NULLCHAR) {
 	if (*appData.remoteShell == NULLCHAR) {
 	    /* Use the rcmd protocol to run telnet program on a gateway host */
 	    snprintf(buf, sizeof(buf), "%s %s %s",

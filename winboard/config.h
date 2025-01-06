@@ -132,7 +132,7 @@
   -DATTENTION is included even though I haven't been able to send signals to
     child processes on Windows, because at least I can send them over rsh to
     Unix programs.  On Windows I send a newline instead, which wakes up the
-    chess program if it's polling.  On my GNU Chess port the newline actually 
+    chess program if it's polling.  On my GNU Chess port the newline actually
     works even for Move Now.
 */
 #define EMULATE_RSH 1
@@ -144,7 +144,7 @@
 #define _winmajor 3  /* windows 95 */
 #endif
 
-/* Some definitions required by MSVC 4.1 */ 
+/* Some definitions required by MSVC 4.1 */
 #ifndef WM_MOUSEWHEEL 
 #define WM_MOUSEWHEEL 0x020A 
 #endif 
@@ -153,10 +153,10 @@
 #define SCF_ALL 0x0004 
 #endif 
 
-#ifdef _MSC_VER
-#define snprintf _snprintf
-#define inline __inline
-#if _MSC_VER < 1500
-#define vsnprintf _vsnprintf
-#endif
-#endif
+//#ifdef _MSC_VER
+//#define snprintf _snprintf
+//#define inline __inline
+//#if _MSC_VER < 1500
+//#define vsnprintf _vsnprintf
+//#endif
+//#endif

@@ -144,7 +144,7 @@ void RunCommand P((char *buf));
 
 int OpenTelnet P((char *host, char *port, ProcRef *pr));
 int OpenTCP P((char *host, char *port, ProcRef *pr));
-int OpenCommPort P((char *name, ProcRef *pr));
+//int OpenCommPort P((char *name, ProcRef *pr));
 int OpenLoopback P((ProcRef *pr));
 int OpenRcmd P((char *host, char *user, char *cmd, ProcRef *pr));
 

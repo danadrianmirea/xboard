@@ -9443,6 +9443,7 @@ OpenTCP(char *host, char *port, ProcRef *pr)
   return NO_ERROR;
 }
 
+/*
 int
 OpenCommPort(char *name, ProcRef *pr)
 {
@@ -9465,7 +9466,6 @@ OpenCommPort(char *name, ProcRef *pr)
 
   if (!SetCommState(h, (LPDCB) &dcb)) return GetLastError();
 
-  /* Accumulate characters until a 100ms pause, then parse */
   ct.ReadIntervalTimeout = 100;
   ct.ReadTotalTimeoutMultiplier = 0;
   ct.ReadTotalTimeoutConstant = 0;
@@ -9473,7 +9473,7 @@ OpenCommPort(char *name, ProcRef *pr)
   ct.WriteTotalTimeoutConstant = 0;
   if (!SetCommTimeouts(h, (LPCOMMTIMEOUTS) &ct)) return GetLastError();
 
-  /* Prepare return value */
+  // Prepare return value 
   cp = (ChildProc *) calloc(1, sizeof(ChildProc));
   cp->kind = CPComm;
   cp->hFrom = h;
@@ -9482,6 +9482,7 @@ OpenCommPort(char *name, ProcRef *pr)
 
   return NO_ERROR;
 }
+*/
 
 int
 OpenLoopback(ProcRef *pr)

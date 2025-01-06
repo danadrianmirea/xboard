@@ -29,7 +29,7 @@ JAWS=0
 CC = @cl
 RC = @rc
 LINK = link
-HC="c:\program files\help workshop\hcrtf.exe" -xn
+#HC="c:\program files\help workshop\hcrtf.exe" -xn
 FLEX = "c:/mingw/mingw32/bin/flex.exe"
 DEFS = -D_WIN32_IE=0x300 -DWIN32 -DWINVER=0x0500 -D_WIN32_WINDOWS=0x500 -D YY_NO_UNISTD_H
 !if $(JAWS) == 1
